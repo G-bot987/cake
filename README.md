@@ -1,8 +1,8 @@
 # Cake Digital Developer Tec Test
 
 ## Steps to run locally
-- [] npm install, and check for ts version  https://code.visualstudio.com/docs/typescript/typescript-compiling
-- [] give your key & API endpoint to '.env' do not commit this use git ignore principles.
+-  npm install, and check for ts version  https://code.visualstudio.com/docs/typescript/typescript-compiling
+-  give your key & API endpoint to '.env' do not commit this use git ignore principles.
 
 
 ## Running scriptss
