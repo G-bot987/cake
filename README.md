@@ -18,3 +18,7 @@ then run with compiled js file e.g. node script1.js
 - [x] 'line_item' has a 'product_id' that is null, sales are ignored. 
 
 # Script 2 
+
+- [x] create/update total_sales metafield on each product found in 'salesdata.json'
+- [x]  updates metafield with total sales, quanity sold * unit price
+- [x]  uses Admin GraphQL metafieldSet mutation
