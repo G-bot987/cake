@@ -17,6 +17,7 @@ async function makeReq() {
         return await jsonRes
     } else {
         console.log('an error occured with the request ')
+        console.log(result)
         return
     }
 
