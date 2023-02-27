@@ -4,7 +4,7 @@ import { salesByOrderInterface, salesDataInterface } from './interfaces/salesDat
 import { config } from './config';
 
 
-async function makeReq() {
+const makeReq = async () => {
 
     const result = await fetch(`${config.endPoint}`, {
         headers: {
@@ -23,14 +23,14 @@ async function makeReq() {
 
 }
 
-function calculateAverageBasketValue(orders: ApiOrderInterface[]) {
+const calculateAverageBasketValue = (orders: ApiOrderInterface[]) => {
 
     const totalOrderVal: number = orders.reduce((acc: number, order: ApiOrderInterface) => acc += parseInt(order.current_total_price), 0)
     const averageBasketValue = parseFloat((totalOrderVal / orders.length).toFixed(2))
     return averageBasketValue
 }
 
-function removeNullSales(orders: ApiOrderInterface[]) {
+const removeNullSales = (orders: ApiOrderInterface[]) => {
     const products = orders.reduce((acc: salesByOrderInterface[], order: ApiOrderInterface) => {
         const { line_items } = order;
         const line_items_reduced = line_items
@@ -44,7 +44,7 @@ function removeNullSales(orders: ApiOrderInterface[]) {
     return products
 }
 
-function calculateTotalSalesPerProduct(products: salesByOrderInterface[]) {
+const calculateTotalSalesPerProduct = (products: salesByOrderInterface[]) => {
 
     const quantityOfSales = products.reduce((acc: salesByOrderInterface[], product: salesByOrderInterface) => {
         const { product_id, quantity, price } = product;
@@ -62,7 +62,7 @@ function calculateTotalSalesPerProduct(products: salesByOrderInterface[]) {
     return quantityOfSales
 }
 
-async function writeJsonFile(averageBasketValue: number, totalQuantitiesByProduct: salesByOrderInterface[]) {
+const writeJsonFile = async (averageBasketValue: number, totalQuantitiesByProduct: salesByOrderInterface[]) => {
     const salesData: salesDataInterface = {
         averageBasketValue,
         salesByProduct: totalQuantitiesByProduct
@@ -75,7 +75,7 @@ async function writeJsonFile(averageBasketValue: number, totalQuantitiesByProduc
 }
 
 
-async function firstQuery() {
+const firstQuery = async () => {
 
     // make req
     const reqResponse = await makeReq()
