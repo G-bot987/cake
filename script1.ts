@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises';
 import { ApiOrderInterface } from './interfaces/apiInterfaces/orderInterface';
 import { salesByOrderInterface, salesDataInterface } from './interfaces/salesDataInterfaces';
-const { config } = require('./config');
+import { config } from './config';
 
 
 async function makeReq() {

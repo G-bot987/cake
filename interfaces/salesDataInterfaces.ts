@@ -8,3 +8,8 @@ export interface salesDataInterface {
     averageBasketValue: number;
     salesByProduct: salesByOrderInterface[]
 }
+
+export interface total_salesInterface {
+    id: number;
+    totalSales: number;
+}
