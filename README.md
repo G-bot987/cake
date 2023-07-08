@@ -22,3 +22,7 @@ then run with compiled js file e.g. node script1.js
 - [x] create/update total_sales metafield on each product found in 'salesdata.json'
 - [x]  updates metafield with total sales, quanity sold * unit price
 - [x]  uses Admin GraphQL metafieldSet mutation
+
+## Demo 
+
+[DemoVideo](https://drive.google.com/file/d/15txAIc4Z2BPdBKAf3sJxDxTj62HhlTK2/view "https://drive.google.com/file/d/15txAIc4Z2BPdBKAf3sJxDxTj62HhlTK2/view")
